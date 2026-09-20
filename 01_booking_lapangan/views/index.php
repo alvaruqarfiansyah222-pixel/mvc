@@ -34,7 +34,7 @@
             </h1>
 
             <p>
-                Sistem booking lapangan berbasis PHP MVC.
+                BOKING DIHOTEL KAMI
             </p>
 
         </div>
