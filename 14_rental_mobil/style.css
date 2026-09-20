@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* =========================
+   LAYOUT
+   ========================= */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.side {
+    width: 235px;
+    min-height: 100vh;
+    background: #1f2937;
+    color: #fff;
+    padding: 22px 15px;
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 0 10px 28px;
+}
+
+.side a {
+    display: block;
+    color: #dbeafe;
+    text-decoration: none;
+    padding: 11px 12px;
+    border-radius: 8px;
+    margin: 4px 0;
+}
+
+.side a:hover {
+    background: #374151;
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+.main {
+    flex: 1;
+    padding: 28px;
+}
+
+
+/* =========================
+   DASHBOARD CARD
+   ========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #00000010;
+}
+
+.num {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.muted {
+    color: #6b7280;
+}
+
+
+/* =========================
+   PANEL
+   ========================= */
+
+.panel {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #00000010;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background: #f8fafc;
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+.form {
+    max-width: 650px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin: 6px 0 14px;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+button,
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    border: 0;
+    padding: 10px 14px;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.danger {
+    background: #dc2626;
+}
+
+.danger:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .side {
+        width: 190px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .side {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .panel {
+        overflow-x: auto;
+    }
+
+}
